@@ -1,5 +1,7 @@
-require "jwt_easy/version"
+# frozen_string_literal: true
 
-module JwtEasy
+require 'jwt_easy/version'
+
+module JWTEasy
   # Your code goes here...
 end

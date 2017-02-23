@@ -1,11 +1,13 @@
-require "spec_helper"
+# frozen_string_literal: true
 
-describe JwtEasy do
-  it "has a version number" do
-    expect(JwtEasy::VERSION).not_to be nil
+require 'spec_helper'
+
+describe JWTEasy do
+  it 'has a version number' do
+    expect(JWTEasy::VERSION).not_to be nil
   end
 
-  it "does something useful" do
+  it 'does something useful' do
     expect(false).to eq(true)
   end
 end
