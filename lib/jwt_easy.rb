@@ -34,4 +34,32 @@ module JWTEasy
   def configure
     yield(configuration) if block_given?
   end
+
+  # Instantiates a new encoder and encodes the provided data and the global configuration object.
+  #
+  # @example Generate a token from some data
+  #   JWTEasy.encode(id: 'some-identifying-information')
+  #
+  # @param [Object] data the data to be encoded in the token
+  #
+  # @return [String] JSON web token
+  #
+  # @see Encoder
+  def encode(data)
+    Encoder.new(data, configuration).encode
+  end
+
+  # Instantiates a new decoder with the provided data and the global configuration object.
+  #
+  # @example Decode a token
+  #   JWTEasy.decode(token)
+  #
+  # @param [String] token the token to be decoded
+  #
+  # @return [Result] Result of the decode
+  #
+  # @see Encoder
+  def decode(token)
+    Decoder.new(token, configuration).decode
+  end
 end
