@@ -9,6 +9,31 @@ require 'jwt_easy/result'
 require 'jwt_easy/decoder'
 require 'jwt_easy/version'
 
+# JWTEasy is a simple wrapper for the JWT gem that hopes to make generating and consuming various
+# types of JSON web tokens a little easier.
+#
+# == Usage
+#
+# Generating a plain token without encryption might look something like:
+#
+#    token = JWTEasy.encode(id: 'some-identifying-information')
+#
+# You'd likely want to configure things before though:
+#
+#    # config/initializers/jwt_easy.rb
+#    JWTEasy.configure do |config|
+#      config.not_before_time  = 3_600
+#      config.secret           = ENV['JWT_EASY_SECRET']
+#      config.algorithm        = JWTEasy::ALGORITHM_HMAC_HS256
+#    end
+#
+# Of course you're able to consume tokens just as easily:
+#
+#    JWTEasy.decode(token).id #=> 'some-identifying-information'
+#
+# @see JWTEasy.encode
+# @see JWTEasy.decode
+# @see JWTEasy.configure
 module JWTEasy
   module_function
 
