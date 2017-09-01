@@ -2,6 +2,7 @@
 
 require 'jwt'
 require 'jwt_easy/constants'
+require 'jwt_easy/encoder'
 require 'jwt_easy/configuration'
 require 'jwt_easy/version'
 
