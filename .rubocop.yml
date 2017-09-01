@@ -4,5 +4,10 @@ AllCops:
 Documentation:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - '*.gemspec'
+
 Metrics/LineLength:
   Max: 100
