@@ -6,6 +6,7 @@ require 'jwt_easy/constants'
 require 'jwt_easy/encoder'
 require 'jwt_easy/configuration'
 require 'jwt_easy/result'
+require 'jwt_easy/decoder'
 require 'jwt_easy/version'
 
 module JWTEasy
