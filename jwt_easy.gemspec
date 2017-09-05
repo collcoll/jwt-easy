@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'jwt_easy'
   spec.description   = 'Library for generating and consuming JSON web tokens easily.'
-  spec.homepage      = 'https://github.com/lshepstone/jwt_easy'
+  spec.homepage      = 'https://github.com/lshepstone/jwt-easy'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
