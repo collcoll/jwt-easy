@@ -10,7 +10,8 @@ module JWTEasy
 
     attr_accessor :secret,
                   :expiration_time,
-                  :not_before_time
+                  :not_before_time,
+                  :leeway
 
     # Gets the algorithm to use when encoding tokens
     #

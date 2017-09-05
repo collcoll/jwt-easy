@@ -56,6 +56,14 @@ module JWTEasy
         end
 
         it { is_expected.to include(validate_exp: true) }
+
+        context 'and leeway has been configured' do
+          let(:leeway) { 30 }
+
+          before { configuration.leeway = leeway }
+
+          it { is_expected.to include(exp_leeway: leeway) }
+        end
       end
 
       context 'when not before time has been configured' do
@@ -66,6 +74,14 @@ module JWTEasy
         end
 
         it { is_expected.to include(validate_nbf: true) }
+
+        context 'and leeway has been configured' do
+          let(:leeway) { 30 }
+
+          before { configuration.leeway = leeway }
+
+          it { is_expected.to include(nbf_leeway: leeway) }
+        end
       end
     end
 

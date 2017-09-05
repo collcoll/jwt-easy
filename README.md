@@ -29,6 +29,16 @@ Of course you're able to consume tokens just as easily:
 JWTEasy.decode(token).id #=> 'some-identifying-information'
 ```
 
+### Adding Leeway
+
+For both EXP and NBF claims, you're able to specify the leeway to be used when decoding tokens:
+
+```ruby
+JWTEasy.configure do |config|
+ config.leeway = 30 # seconds
+end
+````
+
 ## Installation
 
 Add this line to your application's Gemfile:

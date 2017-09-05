@@ -42,13 +42,28 @@ module JWTEasy
     def headers
       @headers.tap do |headers|
         headers[:algorithm] = configuration.algorithm if verification?
-
         case configuration.claim
         when CLAIM_EXPIRATION_TIME
-          headers[:validate_exp] = true
+          headers.merge!(exp_headers)
         when CLAIM_NOT_BEFORE_TIME
-          headers[:validate_nbf] = true
+          headers.merge!(nbf_headers)
         end
+      end
+    end
+
+    private
+
+    def exp_headers
+      {}.tap do |headers|
+        headers[:validate_exp] = true
+        headers[:exp_leeway] = configuration.leeway if configuration.leeway
+      end
+    end
+
+    def nbf_headers
+      {}.tap do |headers|
+        headers[:validate_nbf] = true
+        headers[:nbf_leeway] = configuration.leeway if configuration.leeway
       end
     end
   end
