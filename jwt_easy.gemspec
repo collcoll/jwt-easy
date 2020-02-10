@@ -8,12 +8,12 @@ require 'jwt_easy/version'
 Gem::Specification.new do |spec|
   spec.name          = 'jwt_easy'
   spec.version       = JWTEasy::VERSION
-  spec.authors       = ['Lawrance Shepstone']
-  spec.email         = ['lawrance.shepstone@gmail.com']
+  spec.authors       = ['Collaboration Collective']
+  spec.email         = ['hello@collabcollective.com']
 
   spec.summary       = 'jwt_easy'
   spec.description   = 'Library for generating and consuming JSON web tokens easily.'
-  spec.homepage      = 'https://github.com/lshepstone/jwt-easy'
+  spec.homepage      = 'https://github.com/collcoll/jwt-easy'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
@@ -26,9 +26,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jwt', '~> 1.5'
 
   spec.add_development_dependency 'bundler', '~> 1.13'
+  spec.add_development_dependency 'pry', '~> 0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.49.0'
-  spec.add_development_dependency 'pry', '~> 0'
   spec.add_development_dependency 'timecop', '~> 0'
 end
