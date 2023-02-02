@@ -1,13 +1,14 @@
 AllCops:
   TargetRubyVersion: 2.5
+  NewCops: enable
 
-Documentation:
-  Enabled: false
+Layout/LineLength:
+  Max: 100
 
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
     - '*.gemspec'
 
-Metrics/LineLength:
-  Max: 100
+Style/Documentation:
+  Enabled: false
