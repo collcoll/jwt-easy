@@ -58,7 +58,7 @@ module JWTEasy
     end
 
     def respond_to_missing?(method, _include_private = false)
-      data.is_a?(Hash) && data.key?(method.to_s) || super
+      (data.is_a?(Hash) && data.key?(method.to_s)) || super
     end
   end
 end

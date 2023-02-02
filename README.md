@@ -1,6 +1,6 @@
 # JWTEasy
 
-JWTEasy is a simple wrapper for the [JWT](https://github.com/jwt/ruby-jwt) gem (version 1.x) that hopes to make generating and consuming various types of JSON web tokens a little easier.
+JWTEasy is a simple wrapper for the [JWT](https://github.com/jwt/ruby-jwt) gem (see versions below) that hopes to make generating and consuming various types of JSON web tokens a little easier.
 
 > **Note:** Currently only supports plain, EXP and NBF tokens with HMAC HS256 encryption.
 
@@ -55,6 +55,15 @@ Or install it yourself as:
 
     $ gem install jwt_easy
 
+## Versions
+
+This gem's version numbers don't track that of the JWT gem, if you require support for a specific JWT gem version, you need to specify the correct version for this gem. 
+
+| jwt_easy | jwt   | Ruby     |
+|----------|-------|----------|
+| < 1.0.0  | 1.5.x | >= 2.4.x |
+| 1.0.0    | 2.7.x | >= 2.5.x |
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -63,4 +72,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/lshepstone/jwt-easy.
+Bug reports and pull requests are welcome on GitHub at https://github.com/collcoll/jwt-easy.
